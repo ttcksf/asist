@@ -4,6 +4,7 @@
     "sources": [
         "style.scss",
         "_common.scss",
+        "_includes.scss",
         "_front-page.scss"
     ],
     "names": [],
