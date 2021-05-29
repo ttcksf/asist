@@ -201,9 +201,8 @@ textarea {
         color: $color-text;
         box-shadow: 0 3px 6px rgba(#333, 0.16);
         @include mq(sp) {
-            height: 60px;
-            line-height: 60px;
             font-size: 16px;
+            line-height: inherit;
         }
     }
 }
