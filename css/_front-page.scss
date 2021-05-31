@@ -232,3 +232,49 @@
 
     }
 }
+
+/*==================================
+# menu-section
+==================================*/
+.card{
+    background: url(../img/menu-bg.png) no-repeat center center / contain;
+}
+.card__inner{
+
+}
+.card__items{
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
+}
+.card__item{
+    width: 33.33%;
+    &-menu{
+        background: $color-gray;
+    }
+}
+.card__body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.card__title{
+    font-family: $font-english;
+    font-weight: 400;
+    font-size: 48px;
+}
+.card__lead{
+    font-family: $font-base;
+    font-weight: 400;
+    font-size: 24px;
+}
+.card__button{
+    font-family: $font-base;
+    font-weight: 400;
+    font-size: 24px;
+}
+.card__image{
+    img{
+
+    }
+}
