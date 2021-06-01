@@ -1154,4 +1154,78 @@ textarea {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+
+/*==================================
+# price
+==================================*/
+.price {
+  background: #012136;
+}
+
+.price__head {
+  font-size: 72px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .price__head {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .price__head {
+    font-size: 64px;
+  }
+}
+
+.price__table {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table {
+  margin: 0;
+  width: 100%;
+  border: 2px solid #fff;
+  table-layout: fixed;
+}
+
+.table th,
+.table td {
+  height: 60px;
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 24px;
+  line-height: 60px;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .table th,
+  .table td {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 767px) {
+  .table th,
+  .table td {
+    font-size: 22px;
+  }
+}
+
+.table th {
+  background: #fff;
+  color: #333;
+}
+
+.table td {
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
 /*# sourceMappingURL=style.css.map */

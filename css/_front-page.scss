@@ -328,3 +328,60 @@
         transform: translate(-50%, -50%);
     }
 }
+
+/*==================================
+# price
+==================================*/
+.price{
+    background: $color-main;
+}
+.price__inner{
+
+}
+.price__head{
+    font-size: 72px;
+    text-align: center;
+    font-family: $font-english;
+    color: $color-white;
+    @include mq(tab) {
+        font-size: 64px;
+    }
+    @include mq(sp) {
+        font-size: 64px;
+    }
+}
+.price__table{
+    width: 100%;
+    margin: 0 auto;
+}
+.table{
+    margin: 0;
+    width: 100%;
+    border: 2px solid $color-white;
+    table-layout: fixed;
+    th,
+    td{
+        height: 60px;
+        text-align: center;
+        font-family: $font-base;
+        font-size: 24px;
+        line-height: 60px;
+        vertical-align: middle;
+        @include mq(tab) {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+        @include mq(sp) {
+            font-size: 22px;
+        }
+    }
+    th{
+        background: $color-white;
+        color: $color-text;
+    }
+    td{
+        background: transparent;
+        color: $color-white;
+        border-bottom: 1px solid $color-white;
+    }
+}
