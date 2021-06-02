@@ -194,6 +194,11 @@ textarea {
             background: $color-blue;
         }
     }
+    &-green{
+        a{
+            background: $color-green;
+        }
+    }
 }
 .btn-transparent{
     display: inline-block;
