@@ -193,6 +193,14 @@ textarea {
         a{
             background: $color-blue;
         }
+        &-sm{
+            a{
+                height: 70px;
+                line-height: 70px;
+                font-size: 32px;
+                background: $color-blue;
+            }
+        }
     }
     &-green{
         a{
