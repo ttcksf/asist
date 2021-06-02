@@ -260,14 +260,17 @@ textarea {
 }
 
 //pagination
+.pagenation-wrapper{
+    text-align: center;
+}
 .pagenation {
-	text-align: center;
+	text-align: left;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     max-width: 100%;
+    display: inline-block;
 }
-
 .pagenation a {
 	transition: all 0.3s ease 0s;
 }
