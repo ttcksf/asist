@@ -217,6 +217,29 @@ textarea {
   background: #0087cb;
 }
 
+.btn-color-blue-sm a {
+  height: 70px;
+  line-height: 70px;
+  font-size: 32px;
+  background: #0087cb;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-color-blue-sm a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-color-blue-sm a {
+    font-size: 24px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
 .btn-color-green a {
   background: #00a03e;
 }
@@ -1809,26 +1832,44 @@ textarea {
 ==================================*/
 .recruit {
   background: #fff;
+  margin-bottom: 200px;
 }
 
 .recruit__inner {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(0, rgba(0, 135, 203, 0.6)));
+  background: linear-gradient(transparent 60%, rgba(0, 135, 203, 0.6) 0);
+}
+
+@media (max-width: 767px) {
+  .recruit__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(0, rgba(0, 135, 203, 0.6)));
+    background: linear-gradient(transparent 20%, rgba(0, 135, 203, 0.6) 0);
+  }
 }
 
 .recruit__image {
   width: 400px;
   height: 400px;
+  margin-bottom: 60px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .recruit__image {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 0;
+    margin-top: 40px;
   }
 }
 
@@ -1853,9 +1894,89 @@ textarea {
 
 @media (max-width: 767px) {
   .recruit__image img {
+    width: 80%;
+    height: 80%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
+}
+
+@media (max-width: 430px) {
+  .recruit__image img {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.recruit__content {
+  width: 485px;
+  height: 335px;
+  padding: 30px 0 0 50px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recruit__content {
+    width: 218px;
+    padding: 0 0 0 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recruit__content {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.recruit__content-title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recruit__content-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recruit__content-title {
+    font-size: 32px;
+  }
+}
+
+.recruit__content-description {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 40px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .recruit__content-description {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .recruit__content-description {
+    margin: 20px 0;
+    font-size: 18px;
+  }
+}
+
+.recruit__button {
+  max-width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

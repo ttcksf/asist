@@ -75,17 +75,27 @@
 ==================================*/
 .recruit{
     background: $color-white;
+    margin-bottom: 200px;
 }
 .recruit__inner{
+    width: 100%;
     display: flex;
     justify-content: center;
+    background: linear-gradient(transparent 60%, rgba(0,135,203,0.6) 0);
+    @include mq(sp) {
+        flex-direction: column-reverse;
+        background: linear-gradient(transparent 20%, rgba(0,135,203,0.6) 0);
+    }
 }
 .recruit__image{
         width: 400px;
         height: 400px;
+        margin-bottom: 60px;
         @include mq(tab) {
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
+            margin-bottom: 0;
+            margin-top: 40px;
         }
         @include mq(sp) {
             width: 100%;
@@ -102,21 +112,64 @@
             width: 100%;
             height: 100%;
             @include mq(sp) {
+                width: 80%;
+                height: 80%;
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: 50%;
+                transform: translateX(-50%);
             }
         }
 }
+@media (max-width: 430px){
+    .recruit__image img{
+        width: 100%;
+        height: 100%;
+        left: 0;
+        transform: translateX(0);
+    }
+}
 .recruit__content{
-
+    width: 485px;
+    height: 335px;
+    padding: 30px 0 0 50px;
+    @include mq(tab) {
+        width: 218px;
+        padding: 0 0 0 15px;
+    }
+    @include mq(sp) {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin-bottom: 40px;
+        text-align: center;
+    }
 }
 .recruit__content-title{
-
+    font-family: $font-english;
+    font-weight: 500;
+    font-size: 48px;
+    @include mq(tab) {
+        font-size: 32px;
+    }
+    @include mq(sp) {
+        font-size: 32px;
+    }
 }
 .recruit__content-description{
-
+    font-family: $font-base;
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 40px 0;
+    @include mq(tab) {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+    @include mq(sp) {
+        margin: 20px 0;
+        font-size: 18px;
+    }
 }
 .recruit__button{
-
+    max-width: 100%;
 }
