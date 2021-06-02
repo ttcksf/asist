@@ -177,6 +177,11 @@ textarea {
         border-radius: 10px;
         color: $color-white;
         box-shadow: 0 3px 6px rgba(#333, 0.16);
+        @include mq(tab) {
+            height: 75px;
+            line-height: 75px;
+            font-size: 30px;
+        }
         @include mq(sp) {
             width: 230px;
             height: 60px;
@@ -386,5 +391,40 @@ textarea {
 .entry-404-btn .btn:hover {
 	background: $color-gray;
 	opacity: 1;
+}
+//cta
+.cta{
+    background: url(../img/cat-bg.png) no-repeat;
+    background-size: cover;
+}
+.cta__inner{
+    text-align: center;
+}
+.cta-title{
+    font-family: $font-base;
+    font-size: 48px;
+    font-weight: 700;
+    color: $color-white;
+    @include mq(tab) {
+        font-size: 38px;
+    }
+    @include mq(sp) {
+        font-size: 32px;
+    }
+}
+.cta-description{
+    font-family: $font-base;
+    font-size: 24px;
+    color: $color-white;
+    margin: 50px 0;
+    @include mq(tab) {
+        font-size: 20px;
+    }
+    @include mq(sp) {
+        font-size: 18px;
+    }
+}
+.cta__button{
+
 }
 

@@ -196,6 +196,14 @@ textarea {
           box-shadow: 0 3px 6px rgba(51, 51, 51, 0.16);
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .btn-color a {
+    height: 75px;
+    line-height: 75px;
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 767px) {
   .btn-color a {
     width: 230px;
@@ -440,6 +448,53 @@ textarea {
 .entry-404-btn .btn:hover {
   background: #e5e5e5;
   opacity: 1;
+}
+
+.cta {
+  background: url(../img/cat-bg.png) no-repeat;
+  background-size: cover;
+}
+
+.cta__inner {
+  text-align: center;
+}
+
+.cta-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cta-title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-title {
+    font-size: 32px;
+  }
+}
+
+.cta-description {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 24px;
+  color: #fff;
+  margin: 50px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cta-description {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .cta-description {
+    font-size: 18px;
+  }
 }
 
 /*==================================
