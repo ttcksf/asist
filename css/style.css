@@ -217,6 +217,10 @@ textarea {
   background: #0087cb;
 }
 
+.btn-color-green a {
+  background: #00a03e;
+}
+
 .btn-transparent {
   display: inline-block;
 }
@@ -1591,6 +1595,119 @@ textarea {
 @media (max-width: 767px) {
   .news__text + p {
     font-size: 16px;
+  }
+}
+
+.single {
+  width: 600px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .single {
+    width: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .single {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.single__head {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 36px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .single__head {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .single__head {
+    font-size: 28px;
+  }
+}
+
+.single__img {
+  width: 600px;
+  height: 600px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .single__img {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .single__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  .single__img::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.single__img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .single__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.single__text {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 24px;
+  line-height: 3.0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .single__text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .single__text {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+}
+
+.single__button {
+  text-align: center;
+}
+
+.single__button a {
+  font-size: 36px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .single__button a {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .single__button a {
+    font-size: 24px;
   }
 }
 /*# sourceMappingURL=style.css.map */
