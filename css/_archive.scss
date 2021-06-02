@@ -1,0 +1,107 @@
+/*==================================
+# news
+==================================*/
+.news{
+    background: $color-white;
+    height: auto;
+}
+.news__inner{
+
+}
+.news__head{
+    font-family: $font-english;
+    color: $color-text;
+    font-size: 96px;
+    font-weight: 200;
+    text-align: center;
+    @include mq(tab) {
+        font-size: 64px;
+    }
+    @include mq(sp) {
+        font-size: 56px;
+    }
+}
+.news__items{
+    text-align: center;
+}
+.news__item-link{
+    display: inline-block;
+    &:not(:first-child){
+        margin-top: 100px;
+    }
+}
+.news__item{
+    width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    @include mq(tab) {
+        width: 480px;
+    }
+    @include mq(sp) {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+.news__img{
+    width: 600px;
+    height: 600px;
+    @include mq(tab) {
+        width: 480px;
+        height: 480px;
+    }
+    @include mq(sp) {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        @include mq(sp) {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+.news__title{
+    color: $color-text;
+    font-size: 32px;
+    margin: 15px 0;
+    @include mq(tab) {
+        font-size: 28px;
+    }
+    @include mq(sp) {
+        font-size: 24px;
+    }
+}
+.news__text{
+    color: $color-text;
+    font-size: 24px;
+    font-family: $font-base;
+    font-weight: 400;
+    @include mq(tab) {
+        font-size: 18px;
+    }
+    @include mq(sp) {
+        font-size: 16px;
+    }
+}
+.news__text + p{
+    color: $color-text;
+    font-size: 24px;
+    font-family: $font-base;
+    font-weight: 400;
+    @include mq(tab) {
+        font-size: 18px;
+    }
+    @include mq(sp) {
+        font-size: 16px;
+    }
+}

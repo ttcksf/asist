@@ -191,7 +191,6 @@ textarea {
   font-weight: 700;
   text-align: center;
   border-radius: 10px;
-  background: #012136;
   color: #fff;
   -webkit-box-shadow: 0 3px 6px rgba(51, 51, 51, 0.16);
           box-shadow: 0 3px 6px rgba(51, 51, 51, 0.16);
@@ -204,6 +203,10 @@ textarea {
     line-height: 60px;
     font-size: 24px;
   }
+}
+
+.btn-color-blue a {
+  background: #0087cb;
 }
 
 .btn-transparent {
@@ -292,8 +295,12 @@ textarea {
   }
 }
 
-.pagenation {
+.pagenation-wrapper {
   text-align: center;
+}
+
+.pagenation {
+  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,6 +310,7 @@ textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 100%;
+  display: inline-block;
 }
 
 .pagenation a {
@@ -838,7 +846,7 @@ textarea {
   }
 }
 
-.news__head {
+.main-visual__news__head {
   font-family: "Oswald", sans-serif;
   font-weight: 200;
   font-size: 32px;
@@ -848,38 +856,38 @@ textarea {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .news__head {
+  .main-visual__news__head {
     font-size: 24px;
     font-weight: normal;
   }
 }
 
 @media (max-width: 767px) {
-  .news__head {
+  .main-visual__news__head {
     font-size: 18px;
     font-weight: normal;
   }
 }
 
-.news__body {
+.main-visual__news__body {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 200;
   font-size: 18px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .news__body {
+  .main-visual__news__body {
     font-size: 16px;
   }
 }
 
 @media (max-width: 767px) {
-  .news__body {
+  .main-visual__news__body {
     font-size: 14px;
   }
 }
 
-.news__item {
+.main-visual__news__item {
   padding: 10px;
   margin-top: 20px;
   border-bottom: 2px solid #e5e5e5;
@@ -887,12 +895,12 @@ textarea {
 }
 
 @media (max-width: 767px) {
-  .news__item {
+  .main-visual__news__item {
     margin-top: 10px;
   }
 }
 
-.news__item a {
+.main-visual__news__item a {
   color: #333;
 }
 
@@ -1374,6 +1382,160 @@ textarea {
 @media (max-width: 767px) {
   .access__description {
     font-size: 18px;
+  }
+}
+
+/*==================================
+# news
+==================================*/
+.news {
+  background: #fff;
+  height: auto;
+}
+
+.news__head {
+  font-family: "Oswald", sans-serif;
+  color: #333;
+  font-size: 96px;
+  font-weight: 200;
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .news__head {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__head {
+    font-size: 56px;
+  }
+}
+
+.news__items {
+  text-align: center;
+}
+
+.news__item-link {
+  display: inline-block;
+}
+
+.news__item-link:not(:first-child) {
+  margin-top: 100px;
+}
+
+.news__item {
+  width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .news__item {
+    width: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.news__img {
+  width: 600px;
+  height: 600px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .news__img {
+    width: 480px;
+    height: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+  }
+  .news__img::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
+.news__img img {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .news__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.news__title {
+  color: #333;
+  font-size: 32px;
+  margin: 15px 0;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .news__title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__title {
+    font-size: 24px;
+  }
+}
+
+.news__text {
+  color: #333;
+  font-size: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .news__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__text {
+    font-size: 16px;
+  }
+}
+
+.news__text + p {
+  color: #333;
+  font-size: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .news__text + p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news__text + p {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */
