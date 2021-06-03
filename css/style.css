@@ -1989,6 +1989,7 @@ textarea {
   color: #333;
   font-size: 96px;
   text-align: center;
+  font-weight: 200;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
