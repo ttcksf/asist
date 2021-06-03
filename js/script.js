@@ -8,3 +8,8 @@ jQuery(function ($) {
         $(".main-visual__left").height(windowHeight);
     });
 });
+
+//wow
+jQuery(function($){
+    new WOW().init();
+});
