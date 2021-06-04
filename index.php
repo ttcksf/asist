@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-<?php get_header(); ?>
+    <?php get_header(); ?>
 </head>
 
 <body>
@@ -55,17 +55,19 @@
                 <div class="SPACER--80"></div><!-- /.SPACER--80 -->
                 <!-- pagenation -->
                 <div class="pagenation-wrapper">
-                    <div class="pagenation">
-                        <span class="page-numbers current">1</span>
-                        <a class="page-numbers" href="#">2</a>
-                        <a class="page-numbers" href="#">3</a>
-                        <a class="page-numbers" href="#">4</a>
-                        <a class="page-numbers" href="#">5</a>
-                        <a class="page-numbers" href="#">6</a>
-                        <a class="page-numbers" href="#">7</a>
-                        <a class="page-numbers" href="#">8</a>
-                        <a class="next page-numbers" href="#"><i class="fas fa-angle-right"></i></a>
-                    </div><!-- /pagenation -->
+                    <?php if (paginate_links()) : ?>
+                        <div class="pagenation">
+                            <?php
+                            echo paginate_links(array(
+                                'end_size' => 1,
+                                'mid_size' => 1,
+                                'prev_next' => true,
+                                'prev_text' => '<i class="fas fa-angle-left"></i>',
+                                'next_text' => '<i class="fas fa-angle-right"></i>',
+                            ));
+                            ?>
+                        </div><!-- /pagenation -->
+                    <?php endif; ?>
                 </div><!-- /.pagenation-wrapper -->
             </div><!-- /.news__items -->
             <div class="SPACER--200"></div><!-- /.SPACER--100 -->
