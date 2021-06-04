@@ -7,5 +7,5 @@
         </p><!-- /.copyright -->
         <div class="SPACER--60"></div><!-- /.SPACER--60 -->
     </div><!-- /.footer__inner inner -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </footer><!-- /.footer -->
