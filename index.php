@@ -13,45 +13,25 @@
             <h1 class="news__head">News</h1><!-- /.news__head -->
             <div class="SPACER--60"></div><!-- /.SPACER--60 -->
             <div class="news__items">
-                <a href="/single.html" class="news__item-link">
-                    <div class="news__item">
-                        <div class="news__img"><img src="/img/blog1.png" alt=""></div><!-- /.news__img -->
-                        <h2 class="news__title">「魅惑の食遊住コラボ」開催中！</h2><!-- /.news__title -->
-                        <p class="news__text">
-                            4月28日からホテルくれたけイン監修のコラボ企画を実施しております。
-                        </p><!-- /.news__text -->
-                    </div><!-- /.news__item -->
-                </a><!-- /.news__item-link -->
-                <a href="/single.html" class="news__item-link">
-                    <div class="news__item">
-                        <div class="news__img"><img src="/img/blog2.png" alt=""></div><!-- /.news__img -->
-                        <h2 class="news__title">オンラインガールズバーが開始</h2><!-- /.news__title -->
-                        <p class="news__text">
-                            新サービスとして「オンラインガールズバー」がスタートしました。<br>
-                            自宅にいながらキャストとたのしく飲みましょう！
-                        </p><!-- /.news__text -->
-                    </div><!-- /.news__item -->
-                </a><!-- /.news__item-link -->
-                <a href="/single.html" class="news__item-link">
-                    <div class="news__item">
-                        <div class="news__img"><img src="/img/blog3.png" alt=""></div><!-- /.news__img -->
-                        <h2 class="news__title">キャスト、スタッフともに募集中</h2><!-- /.news__title -->
-                        <p class="news__text">
-                            Lady merryで一緒に働きませんか？<br>
-                            未経験者でもしっかりサポートしているので興味がある方は宜しくお願いします。
-                        </p><!-- /.news__text -->
-                    </div><!-- /.news__item -->
-                </a><!-- /.news__item-link -->
-                <a href="/single.html" class="news__item-link">
-                    <div class="news__item">
-                        <div class="news__img"><img src="/img/blog4.png" alt=""></div><!-- /.news__img -->
-                        <h2 class="news__title">公式ホームページを開設</h2><!-- /.news__title -->
-                        <p class="news__text">
-                            この度、公式ホームページを開設致しました。<br>
-                            お得な情報を随時更新していきますのでお気に入り登録の程よろしくお願いします。
-                        </p><!-- /.news__text -->
-                    </div><!-- /.news__item -->
-                </a><!-- /.news__item-link -->
+                <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
+                        <a href="<?php the_permalink(); ?>" class="news__item-link">
+                            <div class="news__item">
+                                <?php if (has_post_thumbnail()) {
+                                    $id = get_post_thumbnail_id();
+                                    $img = wp_get_attachment_image_src($id);
+                                    echo '<div class="news__img"><img src="' . esc_url($img[0]) . '"></div>';
+                                }?>
+                                <h2 class="news__title"><?php the_title(); ?></h2><!-- /.news__title -->
+                                <p class="news__text">
+                                    <?php the_excerpt(); ?>
+                                </p><!-- /.news__text -->
+                            </div><!-- /.news__item -->
+                        </a><!-- /.news__item-link -->
+                    <?php endwhile; ?>
+                <?php else : ?>
+                    <p>記事が見つかりませんでした</p>
+                <?php endif; ?>
                 <div class="SPACER--80"></div><!-- /.SPACER--80 -->
                 <!-- pagenation -->
                 <div class="pagenation-wrapper">
