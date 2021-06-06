@@ -47,7 +47,7 @@ function custom_postpass_time()
 {
     require_once ABSPATH . 'wp-includes/class-phpass.php';
     $hasher = new PasswordHash(8, true);
-    setcookie('wp-postpass_' . COOKIEHASH, $hasher->HashPassword(wp_unslash($_POST['post_password'])), time() + HOUR_IN_SECONDS, COOKIEPATH);
+    setcookie('wp-postpass_' . COOKIEHASH, $hasher->HashPassword(wp_unslash($_POST['post_password'])), time() + MINUTE_IN_SECONDS, COOKIEPATH);
     wp_safe_redirect(wp_get_referer());
     exit();
 }
