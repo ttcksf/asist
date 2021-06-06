@@ -43,7 +43,7 @@
                 とにかく仲良しな女の子と一緒に楽しみながら稼ぎませんか？！
             </p><!-- /.cta-description -->
             <div class="cta__button btn-color btn-color-blue">
-                <a href="">詳しくはこちら</a>
+                <a href="<?php echo esc_url(home_url('/shop'));?>">詳しくはこちら</a>
             </div><!-- /.cta__button btn-color-blue -->
             <div class="SPACER--160"></div><!-- /.SPACER--160 -->
         </div><!-- /.cta__inner -->
