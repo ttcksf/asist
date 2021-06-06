@@ -7,6 +7,7 @@
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.ico">
 <script src="//code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/wow.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/animate.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
 <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
